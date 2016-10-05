@@ -14,3 +14,16 @@ function loadQuestion() {
 }
 
 loadQuestion();
+
+if (annyang) {
+  // Let's define a command.
+  var commands = {
+    'Next': function() { loadQuestion(); }
+  };
+
+  // Add our commands to annyang
+  annyang.addCommands(commands);
+
+  // Start listening.
+  annyang.start();
+}
